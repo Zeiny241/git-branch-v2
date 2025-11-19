@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <style>
+        /* --- ส่วนตกแต่ง (CSS) --- */
+        body {
+            font-family: Arial, sans-serif; /* ฟอนต์พื้นฐาน */
+            background-color: #f4f4f4;      /* สีพื้นหลังจอ */
+            display: flex;
+            justify-content: center;        /* จัดกึ่งกลางแนวนอน */
+            align-items: center;            /* จัดกึ่งกลางแนวตั้ง */
+            height: 100vh;                  /* ความสูงเต็มจอ */
+            margin: 0;
+        }
+
+        .login-box {
+            background-color: white;        /* สีพื้นหลังกล่อง */
+            padding: 20px 40px;             /* ระยะห่างภายในกล่อง */
+            border-radius: 10px;            /* ทำมุมโค้งมน */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* เงาบางๆ */
+            width: 300px;                   /* ความกว้างกล่อง */
+            text-align: center;             /* จัดตัวหนังสือกลาง */
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;                    /* กว้างเต็มกล่อง */
+            padding: 10px;
+            margin: 10px 0;                 /* ระยะห่างบนล่าง */
+            border: 1px solid #ccc;         /* เส้นขอบสีเทา */
+            border-radius: 5px;
+            box-sizing: border-box;         /* ไม่ให้ padding ดันกล่องขยาย */
+        }
+
+        button {
+            background-color: #28a745;      /* สีเขียว */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;      /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="login_process.php" method="post">
+            <div style="text-align: left;">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้" required>
+            </div>
+
+            <div style="text-align: left;">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน" required>
+            </div>
+
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+    </div>
+<a href="index.html" class="btn" style="background: #6c757d;">sign in</a>
+</body>
+</html>
