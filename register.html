@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มสมัครเรียน</title>
+    <style>
+        /* --- ตั้งค่าพื้นฐาน --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* สีฟ้าอ่อน (พื้นหลังจอ) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* เผื่อที่ขอบเวลาจอมือถือ */
+        }
+
+        /* --- กล่องฟอร์ม --- */
+        .register-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2); /* เงาสีฟ้าจางๆ */
+            width: 100%;
+            max-width: 500px; /* ความกว้างสูงสุด */
+            border-top: 5px solid #2196f3; /* ขอบด้านบนสีฟ้าเข้ม */
+        }
+
+        h2 {
+            text-align: center;
+            color: #1565c0; /* สีหัวข้อ (ฟ้าเข้ม) */
+            margin-bottom: 20px;
+        }
+
+        /* --- การจัดวางช่องกรอก --- */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* --- ตกแต่งช่อง Input --- */
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bbdefb; /* ขอบสีฟ้าอ่อน */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* เมื่อคลิกที่ช่อง ให้ขอบเป็นสีฟ้าเข้ม */
+        input:focus, select:focus, textarea:focus {
+            border-color: #2196f3;
+            outline: none;
+        }
+
+        /* --- ตกแต่งปุ่ม --- */
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #2196f3; /* สีปุ่มฟ้าสดใส */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1976d2; /* สีเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-box">
+        <h2>ใบสมัครเข้าเรียน</h2>
+        <form action="register_save.php" method="post">
+            
+            <div class="form-group">
+                <label for="fullname">ชื่อ - นามสกุล:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="เด็กชาย รักเรียน ขยันดี" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">วัน/เดือน/ปี เกิด:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์ผู้ปกครอง:</label>
+                <input type="tel" id="phone" name="phone" placeholder="08x-xxx-xxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="grade">ระดับชั้นที่สมัคร:</label>
+                <select id="grade" name="grade" required>
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="m1">มัธยมศึกษาปีที่ 1</option>
+                    <option value="m2">มัธยมศึกษาปีที่ 2</option>
+                    <option value="m3">มัธยมศึกษาปีที่ 3</option>
+                    <option value="m4">มัธยมศึกษาปีที่ 4</option>
+                    <option value="m5">มัธยมศึกษาปีที่ 5</option>
+                    <option value="m6">มัธยมศึกษาปีที่ 6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">ที่อยู่ปัจจุบัน:</label>
+                <textarea id="address" name="address" rows="3" placeholder="บ้านเลขที่, หมู่บ้าน, ถนน..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">ส่งใบสมัคร</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
