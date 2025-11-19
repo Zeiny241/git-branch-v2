@@ -7,22 +7,22 @@
     <style>
         /* --- ส่วนตกแต่ง (CSS) --- */
         body {
-            font-family: Arial, sans-serif; /* ฟอนต์พื้นฐาน */
-            background-color: #f4f4f4;      /* สีพื้นหลังจอ */
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
-            justify-content: center;        /* จัดกึ่งกลางแนวนอน */
-            align-items: center;            /* จัดกึ่งกลางแนวตั้ง */
-            height: 100vh;                  /* ความสูงเต็มจอ */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
         }
 
         .login-box {
-            background-color: white;        /* สีพื้นหลังกล่อง */
-            padding: 20px 40px;             /* ระยะห่างภายในกล่อง */
-            border-radius: 10px;            /* ทำมุมโค้งมน */
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* เงาบางๆ */
-            width: 300px;                   /* ความกว้างกล่อง */
-            text-align: center;             /* จัดตัวหนังสือกลาง */
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
         }
 
         h2 {
@@ -32,16 +32,16 @@
 
         input[type="text"], 
         input[type="password"] {
-            width: 100%;                    /* กว้างเต็มกล่อง */
+            width: 100%;
             padding: 10px;
-            margin: 10px 0;                 /* ระยะห่างบนล่าง */
-            border: 1px solid #ccc;         /* เส้นขอบสีเทา */
+            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;         /* ไม่ให้ padding ดันกล่องขยาย */
+            box-sizing: border-box;
         }
 
         button {
-            background-color: #28a745;      /* สีเขียว */
+            background-color: #28a745;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -52,13 +52,37 @@
         }
 
         button:hover {
-            background-color: #218838;      /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+            background-color: #218838;
         }
+
+        /* ปุ่มหน้าแรก */
+        .btn-home {
+            background-color: #9e9e9e;
+            color: white;
+            padding: 8px 0;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .btn-home:hover {
+            background-color: #757575;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="login-box">
+
+        <!-- ปุ่มหน้าแรก -->
+        <a href="index.html">
+            <button type="button" class="btn-home">หน้าแรก</button>
+        </a>
+
         <h2>Login</h2>
         <form action="login_process.php" method="post">
             <div style="text-align: left;">
@@ -74,6 +98,6 @@
             <button type="submit">เข้าสู่ระบบ</button>
         </form>
     </div>
-<a href="index.html" class="btn" style="background: #6c757d;">sign in</a>
+
 </body>
 </html>
